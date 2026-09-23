@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> <!-- AQUÍ VIENEN LOS META DATOS Y LA CONEXIÓN AL style.css -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Valeria San Nicolás">
+    <meta name="description" content="Es un diseño de un carrito de compras 
+    para una e- commerce de artículos deportivos.">
+    <meta name="keywords" content="Artículos Deportivos, NFL, Football Americano, ">
+    <!-- Es el título de la página web -->
+    <title>Carrito de Compras - 4TH &  GOAL</title>
+    <!-- Enlaza con la hoja de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+
+    </head>
+    <body class="paper-texture">
+
+<header class="site-header">
+    <div class="container header-inner">
+
+         <a href="#inicio" class="logo">
+          <img src="img/logo4TH&Goal.PNG">
+        
+        <!--<span class="logo-icon">🏈</span>-->
+      
+
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#productos">REWARDS</a></li>
+          <li><a href="#beneficios">LO NUEVO</a></li>
+          <li><a href="#oferta">EQUIPOS</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, bienvenid@ a 4TH & GOAL.')">
+          <i data-lucide="message-circle"></i> SHOP NOW
+        </button>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+
+
+    <nav id="mobile-menu" class="mobile-nav">
+
+     <ul>
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#productos">REWARDS</a></li>
+          <li><a href="#beneficios">LO NUEVO</a></li>
+          <li><a href="#oferta">EQUIPOS</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, bienvenid@ a 4TH & GOAL.')">
+        <i data-lucide="message-circle"></i> SHOP NOW
+      </button>
+
+    
+    </nav>
+</header>
+<main>
+
+<!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">LA GRANDEZA ESTÁ EN LOS DETALLES</p>
+          <h1>4TH & GOAL PRESENTA NFL SIDELINE 2026.</h1>
+          <p class="lead">En la banca de los 32 equipos de la NFL, todos usan la misma gorra.</p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Ver productos</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, bienvenid@ a 4TH & GOAL.')">Comprar por WhatsApp</button>
+          </div>
+          <p class="trust"><i data-lucide="heart"></i> + de 2 MILLONES de clientes</p>
+        </div>
+        <div class="hero-image reveal">
+          <img src="img/imagenhero.JPG" alt="logo gorras nfl">
+          <span class="tag tag-love">ESTA COLECCIÓN LA VES EN LA CABEZA DE CADA JUGADOR, DE CADA HEAD COACH, DE TODOS LOS QUE PISAN LA LÍNEA DE BANDA.</span>
+          <span class="tag tag-custom">4TH & GOAL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>¿POR QUÉ 4TH & GOAL?</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="user-star"></i></div>
+            <h3>32 EQUIPOS</h3>
+            <p>Encuentra diseños inspirados en toda la liga.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="sparkles"></i></div>
+            <h3>SIDELINE STYLE</h3>
+            <p>Lleva el estilo que ves dentro y fuera del campo.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="crown"></i></div>
+            <h3>PARA FANS REALES</h3>
+            <p>Productos pensados para representar a tu equipo.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="mouse-pointer-click"></i></div>
+            <h3>COMPRA FÁCIL</h3>
+            <p>Elige tu favorito y ordénalo directamente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OFERTA ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+          <span class="tag tag-light">WELCOME TO THE TEAM</span>
+          <h2>TU PRIMER PICK TIENE 10% OFF</h2>
+          <p>Estrena los colores de tu equipo y recibe 10% de descuento en tu primera compra.</p>
+          <button id="offer-button" type="button" class="btn butter" onclick="revealOffer()">RECLAMAR MI 10%</button>
+          <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+            <p class="offer-reveal-title">¡Listo! Tu código de bienvenida es:</p>
+            <div class="offer-code-row">
+              <span class="offer-code">4TH&10</span>
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">COPY CODE</button>
+              <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero usar mi código en mi primer pedido.')">Pedir por WhatsApp</button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback hidden" role="status">CODE COPIED</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Así luce NFL Sidelines</p>
+          <h2>Las figuras más importantes de la liga</h2>
+          <p class="lead">Hazlo único.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/foto01.PNG" alt="bills">
+            <div class="product-body">
+              <span class="tag">MVP</span>
+              <h3>JOSH ALLEN</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">El MVP vigente entra a la temporada con cuentas pendientes.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto02.PNG" alt="seahawks">
+            <div class="product-body">
+              <span class="tag">PICK 32</span>
+              <h3>JADARIAN PRICE</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">El cierre de la primera ronda del Draft 2026, pick 32.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto03.PNG" alt="rams">
+            <div class="product-body">
+              <span class="tag">VETERANO</span>
+              <h3>MATTHEW STAFFORD</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">El veterano del grupo lleva la 9SEVENTY azul con el logo dorado.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto04.jpg" alt="titans">
+            <div class="product-body">
+              <span class="tag">PICK 4</span>
+              <h3>CARNELL TATE</h3>
+              <p class="price">$1,119 MXN MXN</p>
+              <p class="description">Una de las sorpresas de la primera ronda.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto05.PNG" alt="packers">
+            <div class="product-body">
+              <span class="tag">THE HOPE</span>
+              <h3>MICAH PARSONS</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">Después del cambio que sacudió a la liga entera.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto06.PNG" alt="las vegas.">
+            <div class="product-body">
+              <span class="tag">PICK 1</span>
+              <h3>FERNANDO MENDOZA</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">De Indiana a ser la cara nueva de Las Vegas.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto07.PNG" alt="broncos">
+            <div class="product-body">
+              <span class="tag">ÉLITE</span>
+              <h3>BO NIX</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">Tres touchdowns ante Buffalo en playoffs.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto.</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto08.jpg" alt="washington">
+            <div class="product-body">
+              <span class="tag">PICK 7</span>
+              <h3>SONNY STYLES</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">Parte del mismo grupo de Ohio State que inundó la primera ronda este año.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+           <article class="product-card reveal">
+            <img src="img/foto09.PNG" alt="cardinals">
+            <div class="product-body">
+              <span class="tag">PICK 3</span>
+              <h3>JEREMIYAH LOVE</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">El corredor mejor drafteado en su posición desde Saquon Barkley.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto10.jpg" alt="dallas">
+            <div class="product-body">
+              <span class="tag">PICK 11</span>
+              <h3>CALEB DOWNS</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">Uno de los jugadores de Ohio State que se fueron en la primera ronda del Draft 2026.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto11.jpg" alt="browns">
+            <div class="product-body">
+              <span class="tag">PUERTO RICAN CULTURE</span>
+              <h3>KC CONCEPCION</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">Otro nombre fresco en el mapa de la NFL.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/foto12.jpg" alt="jaguars">
+            <div class="product-body">
+              <span class="tag">THE LEADER</span>
+              <h3>TRAVIS HUNTER</h3>
+              <p class="price">$1,119 MXN</p>
+              <p class="description">De frente al futuro con los Jaguars.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= TESTIMONIOS ================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">COMUNIDAD 4TH & GOAL</p>
+          <h2>#Mi4TH&GOAL</h2>
+        </div>
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://cdn2.mediotiempo.com/uploads/media/2022/11/21/aficion-ers-mayoria-estadio-azteca.jpg" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Emiliano M.</p>
+                    <p class="occasion">#06547</p>
+                  </div>
+                </div>
+                <p class="quote">"Mi orden llegó súper bien empacado. Está increíble."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://objetos-xlk.estaticos-marca.com/uploads/2026/02/23/699c7f33e9d22.jpeg" alt="Retrato genérico de un hombre sonriente.">
+                  <div>
+                    <p class="name">Eliana S.</p>
+                    <p class="occasion">#52746</p>
+                  </div>
+                </div>
+                <p class="quote">“Por fin encontré merch de mi equipo con un diseño que sí usaría todos los días.”</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://media.gq.com.mx/photos/679d30a77ce8cf889ca46c77/1:1/w_2000,h_2000,c_limit/NFL_y%20Me%CC%81xico_625000378.jpg" alt="Retrato genérico de una mujer joven sonriente.">
+                  <div>
+                    <p class="name">Edgar C.</p>
+                    <p class="occasion">#12640</p>
+                  </div>
+                </div>
+                <p class="quote">“El pedido llegó perfecto y la gorra superó mis expectativas. Definitivamente compraría otra.”</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Testimonio anterior"><i data-lucide="arrow-left"></i></button>
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+            <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+            <button aria-label="Ver testimonio 2" aria-current="false"></button>
+            <button aria-label="Ver testimonio 3" aria-current="false"></button>
+          </div>
+          <button id="testimonial-next" type="button" aria-label="Siguiente testimonio"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-panel reveal">
+        <div class="contact-text">
+          <p class="eyebrow">Estamos cerca</p>
+          <h2>ÚNETE A NUESTRA COMUNIDAD</h2>
+          <p class="lead">Suscríbete al NEWSLETTER de 4TH & GOAL México.</p>
+          <button type="button" class="btn primary" onclick="openWhatsApp('Hola, bienvenid@ a 4TH & GOAL.')">Escribir por WhatsApp</button>
+        </div>
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <ul>
+            <li><i data-lucide="instagram"></i> <a href="https://www.instagram.com/valeasolis?stkn=ZzdrbGNkMjRteTF5&utm_source=qr" target="_blank" rel="noopener noreferrer">@valeasolis</a></li>
+            <li><i data-lucide="mail"></i> <a href="v.sannicolas@ebc.edu.mx">v.sannicolas@ebc.edu.mx</a></li>
+            <li><i data-lucide="clock-3"></i> Lunes a sábado, 10:00 AM a 19:00 PM</li> 
+          </ul>
+        </aside>
+      </div>
+    </section>
+</main>
+ <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">4TH & GOAL</p>
+      <p class="love">Todos los derechos reservados &copy; 2026</p>
+      <nav class="footer-links">
+        <a href="#productos">PRODUCTOS</a>
+        <a href="#contacto">CONTACTO</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ================= MODALES DE PRODUCTO ================= -->
+  <div id="modal-caja" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caja-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto01.PNG" alt="bills">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-caja')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-caja-title">JOSH ALLEN</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>El MVP vigente entra a la temporada con cuentas pendientes.</p>
+      
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-vela" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-vela-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto02.PNG" alt="seattle.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-vela')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-vela-title">JADARIAN PRICE</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>El cierre de la primera ronda del Draft 2026, pick 32.</p>
+      
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-taza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-taza-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto03.PNG" alt="rams">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-taza')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-taza-title">MATTHEW STAFFORD</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>El veterano del grupo lleva la 9SEVENTY azul con el logo dorado.</p>
+    </div>
+  </div>
+  </div>
+
+  <div id="modal-taza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-taza-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto04.jpg" alt="titans">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-taza')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-taza-title">CARNELL TATE</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>Una de las sorpresas de la primera ronda.</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-kit" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-kit-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto05.PNG" alt="packers">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-kit')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-kit-title">MICAH PARSONS</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>De Indiana a ser la cara nueva de Las Vegas.</p>
+       
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto06.PNG" alt="las vegas">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">FERNANDO MENDOZA</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>De Indiana a ser la cara nueva de Las Vegas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto07.PNG" alt="broncos">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">BO NIX</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>Tres touchdowns ante Buffalo en playoffs.</p>
+      </div>
+    </div>
+  </div>
+
+   
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto08.jpg" alt="comanders">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">SONNY STYLES</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>Parte del mismo grupo de Ohio State que inundó la primera ronda este año.</p>
+      </div>
+    </div>
+  </div>
+
+      
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto09.PNG" alt="cardinals">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">JEREMIYAH LOVE</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>El corredor mejor drafteado en su posición desde Saquon Barkley.</p>
+      </div>
+    </div>
+  </div>
+
+      
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto10.jpg" alt="dallas">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">CALEB DOWNS</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>Uno de los jugadores de Ohio State que se fueron en la primera ronda del Draft 2026.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto11.jpg" alt="browns">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">KC CONCEPCION</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>Otro nombre fresco en el mapa de la NFL.</p>
+      </div>
+    </div>
+  </div>
+
+  
+   
+  <div id="modal-kit" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-kit-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/foto12.jpg" alt="jaguars">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-kit')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-kit-title">TRAVIS HUNTER</h2>
+        <p class="price">$1,119 MXN</p>
+        <p>De frente al futuro con los Jaguars.</p>
+       
+      </div>
+    </div>
+  </div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
